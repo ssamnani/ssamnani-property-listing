@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header.module.css";
+import "../styles/Header.module.css";
 import HeaderTabs from "./HeaderTabs";
 import Breadcrumb from "./Breadcrumb";
 

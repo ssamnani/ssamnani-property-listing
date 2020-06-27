@@ -1,5 +1,5 @@
 import React from "react";
-import "./HeaderTabs.module.css";
+import "../styles/HeaderTabs.module.css";
 
 function HeaderTabs() {
   return (

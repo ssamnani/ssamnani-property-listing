@@ -1,7 +1,7 @@
 import React from "react";
 import SearchBox from "./SearchBox";
 import StatesDropdown from "./StatesDropdown";
-import "./SearchBar.module.css";
+import "../styles/SearchBar.module.css";
 import SaleRentToggle from "./SaleRentToggle";
 
 function SearchBar() {

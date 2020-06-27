@@ -7,7 +7,7 @@ import Footer from "./Footer";
 import SearchBox from "./SearchBox";
 import SearchResult from "./SearchResult";
 import MortgageCalculator from "./MortgageCalculator";
-import styles from "./Page.module.css";
+import styles from "../styles/Page.module.css";
 import SearchBar from "./SearchBar";
 import "antd/dist/antd.css";
 

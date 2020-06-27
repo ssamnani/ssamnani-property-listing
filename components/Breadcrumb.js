@@ -1,5 +1,5 @@
 import React from "react";
-import "./Breadcrumb.module.css";
+import "../styles/Breadcrumb.module.css";
 
 function Breadcrumb() {
   return (

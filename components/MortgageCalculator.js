@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./MortgageCalculator.module.css";
+import styles from "../styles/MortgageCalculator.module.css";
 import { Input } from "antd";
 
 function MortgageCalculator() {
