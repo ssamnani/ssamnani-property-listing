@@ -5,11 +5,11 @@ import { Input } from "antd";
 function MortgageCalculator() {
   let inputStyleWide = {
     width: 200,
-    backgroundColor: "rgb(243, 244, 246);",
+    backgroundColor: "rgb(243, 244, 246)",
   };
   let inputStyleSmall = {
     width: 120,
-    backgroundColor: "rgb(243, 244, 246);",
+    backgroundColor: "rgb(243, 244, 246)",
   };
 
   return (
@@ -24,7 +24,7 @@ function MortgageCalculator() {
         <div className="moCalcLeft">
           <div className="monthlyAmount">
             <span>RM 1886</span>
-            <span class="pm">p/m</span>
+            <span className="pm">p/m</span>
           </div>
           <div className="loanAmount">
             <span>Loan Amount: RM 450,000</span>
