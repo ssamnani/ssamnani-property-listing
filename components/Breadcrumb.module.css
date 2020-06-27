@@ -1,0 +1,22 @@
+.breadcrumbWrapper {
+  background-color: #236a9a;
+}
+
+.breadcrumbWrapper > ol {
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 300;
+  color: rgb(210, 214, 218);
+  list-style: none;
+  padding: 7px 26px;
+  margin: 0;
+}
+
+.breadcrumbWrapper > ol > li {
+  display: inline-block;
+}
+
+.breadcrumbWrapper > ol > li:not(:last-of-type):after {
+  content: "/";
+  margin: 9px;
+}

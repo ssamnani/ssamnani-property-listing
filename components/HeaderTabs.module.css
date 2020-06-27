@@ -1,0 +1,33 @@
+.headerTabs > ul {
+  display: inline-block;
+  list-style: none;
+  padding: 0px;
+  margin: 12px 0 0 0;
+}
+
+.headerTabs > ul > li {
+  display: inline-block;
+  padding: 3px 10px;
+}
+
+.headerTabs > ul > li > a {
+  opacity: 0.6;
+  padding: 14px 4px;
+  transition: 0.3s;
+  font-size: 14px;
+  color: #fff;
+}
+
+.headerTabs > ul > li > a.active {
+  opacity: 1;
+  box-shadow: inset 0 -2px 0 #fff;
+}
+
+.headerTabs > ul > li > a:hover {
+  opacity: 1;
+  box-shadow: inset 0 -2px 0 #fff;
+}
+
+.headerTab.active {
+  opacity: 1;
+}

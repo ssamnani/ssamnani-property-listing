@@ -2,22 +2,23 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: MuseoSans, MuseoSans_300-webfont, Museo-Sans-300, Helvetica Neue,
+    Helvetica, Arial, PingFang HK, STHeitiTC-Light, Meiryo, Microsoft JhengHei,
+    sans-serif;
 }
 
 * {
   box-sizing: border-box;
 }
 
-main {
+/* main {
   padding: 5rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
 
 footer {
   width: 100%;

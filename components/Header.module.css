@@ -1,3 +1,17 @@
+.appHeader {
+  background-color: #2f8dcd;
+}
+
+.navWrapper {
+  padding: 20px 15px 10px;
+}
+
+.logo {
+  width: 230px;
+  height: 34px;
+}
+
+/*
 .global-header.hfs {
     position: relative;
     font-family: MuseoSans, MuseoSans_300-webfont, Museo-Sans-300, Helvetica Neue, Helvetica, Arial, PingFang HK, STHeitiTC-Light, Meiryo, Microsoft JhengHei, sans-serif;
@@ -1334,3 +1348,4 @@ a:hover {
     -webkit-animation-name: slideUp;
     animation-name: slideUp
 }
+*/

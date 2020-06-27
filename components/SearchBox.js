@@ -1,10 +1,17 @@
-import React from 'react'
-import styles from './SearchBox.module.css'
+import React from "react";
+import { Input } from "antd";
+import { SearchOutlined } from "@ant-design/icons";
 
 function SearchBox() {
-    return (
-        <React.Fragment/>
-    )
+  return (
+    <>
+      <Input
+        size="large"
+        placeholder="Search by Locations, Train stations, Neighbourhoods or Property name"
+        prefix={<SearchOutlined />}
+      />
+    </>
+  );
 }
 
-export default SearchBox
+export default SearchBox;

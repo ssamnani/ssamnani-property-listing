@@ -1,12 +1,12 @@
-import React from 'react'
-import styles from './Footer.module.css'
+import React from "react";
+import styles from "./Footer.module.css";
 
 function Footer() {
-    return (
-        <footer>
-            <p>© 2020 Gandalf</p>
-        </footer>
-    )
+  return (
+    <footer>
+      <p>© 2020 Gandalf</p>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;
