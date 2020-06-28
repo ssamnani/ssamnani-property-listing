@@ -3,7 +3,7 @@ import styles from "../styles/SearchResult.module.css";
 
 function SearchResult() {
   return (
-    <div class="propertyCard">
+    <div className="propertyCard">
       <div className="cardHeader">
         <div className="headerLeft">
           <div className="agentImage">
@@ -13,10 +13,10 @@ function SearchResult() {
             />
           </div>
           <div className="agentName">Grace Koo</div>
-          <div class="postedOn">Posted today 12:38 AM</div>
+          <div className="postedOn">Posted today 12:38 AM</div>
         </div>
         <div className="headerRight">
-          <div class="agencyLogo">
+          <div className="agencyLogo">
             <img
               src="https://images-my.ippstatic.com/images/searchresult/agencybrandlogo/0771059589124aa19fd8daf5c60c8dc8.png"
               alt="Agency Logo"

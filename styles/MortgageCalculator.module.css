@@ -6,7 +6,8 @@
 .moCalculator .mortgageTitleBar {
   background-color: #333f48;
   display: flex;
-  padding: 12px 8px;
+  padding: 8px 8px;
+  height: 55px;
 }
 .moCalculator .mortgageTitleBar .companyLogoWrap {
   position: relative;
@@ -97,4 +98,9 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+.downPaymentInputsWrapper {
+  display: flex;
+  width: 80px;
+  flex-direction: row;
 }

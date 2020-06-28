@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import styles from "../styles/MortgageCalculator.module.css";
 import { Input } from "antd";
+import MortgageDownPaymentMetricToggle from "./MortgageDownPaymentMetricToggle";
+import "../styles/MortgageCalculator.module.css";
 
 function MortgageCalculator() {
   let inputStyleWide = {
@@ -10,6 +11,7 @@ function MortgageCalculator() {
   let inputStyleSmall = {
     width: 120,
     backgroundColor: "rgb(243, 244, 246)",
+    minWidth: "100px",
   };
 
   // States
@@ -38,8 +40,8 @@ function MortgageCalculator() {
     let i = interestRate / 12 / 100;
     let monthly =
       (loanAmount * i * Math.pow(1 + i, loanMonths)) /
-      Math.pow(1 + i, loanMonths - 1);
-    setMonthlyAmount(monthly.toFixed(2));
+      (Math.pow(1 + i, loanMonths) - 1);
+    setMonthlyAmount(monthly.toFixed(0));
   };
 
   const handlePropertyPriceChange = (event) => {
@@ -60,6 +62,10 @@ function MortgageCalculator() {
   const handleLoanYearsChange = (event) => {
     setLoanYears(event.target.value);
     calculateMonthlyPayment();
+  };
+
+  const handleMetricChange = (val) => {
+    setDownPaymentMetric(val);
   };
 
   return (
@@ -93,12 +99,18 @@ function MortgageCalculator() {
             </div>
             <div>
               <div className="moInpLabel">Down Payment</div>
-              <Input
-                type="number"
-                style={inputStyleSmall}
-                value={downPayment}
-                onChange={handleDownPaymentChange}
-              />
+              <div className="downPaymentInputsWrapper">
+                <Input
+                  type="number"
+                  style={inputStyleSmall}
+                  value={downPayment}
+                  onChange={handleDownPaymentChange}
+                />
+                <MortgageDownPaymentMetricToggle
+                  metric={downPaymentMetric}
+                  onChangeMetric={handleMetricChange}
+                />
+              </div>
             </div>
           </div>
           <div className="moInputWrap">
