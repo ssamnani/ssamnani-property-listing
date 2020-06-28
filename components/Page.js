@@ -1,8 +1,8 @@
 import Head from "next/head";
 import React from "react";
+import { useSelector } from "react-redux";
 import Header from "./Header";
 import Footer from "./Footer";
-import SearchBox from "./SearchBox";
 import SearchResult from "./SearchResult";
 import MortgageCalculator from "./MortgageCalculator";
 import styles from "../styles/Page.module.css";
@@ -11,10 +11,13 @@ import Pagination from "./Pagination";
 import "antd/dist/antd.css";
 
 function Page() {
+  const searchResult = useSelector(state => state.searchResult);
+  const { totalCount  } = searchResult;
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Malaysia properties for sale | iProperty.com.my</title>
         <link rel="icon" href="/favicon.ico" />
 
           <link rel="stylesheet" type="text/css" charSet="UTF-8"
@@ -33,7 +36,7 @@ function Page() {
             <Pagination
                 pageStart='1'
                 pageEnd='20'
-                totalProperties='210939'
+                totalProperties={totalCount}
             />
             <MortgageCalculator />
           </div>
