@@ -10,6 +10,7 @@ import MortgageCalculator from "./MortgageCalculator";
 import styles from "../styles/Page.module.css";
 import SearchBar from "./SearchBar";
 import "antd/dist/antd.css";
+import Pagination from "./Pagination";
 
 function Page() {
   // const dispatch = useDispatch()
@@ -37,6 +38,7 @@ function Page() {
         <div className="subBodyWrapper">
           <div className="searchResultsWrapper">
             <SearchResult />
+            <Pagination pageStart="1" pageEnd="20" totalProperties="210939" />
             <MortgageCalculator />
           </div>
         </div>
