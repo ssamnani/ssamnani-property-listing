@@ -1,94 +1,12 @@
-.propertyCard {
-  margin-bottom: 20px;
-  font-size: 14px;
-  background-color: rgb(255, 255, 255);
-  box-shadow: none;
-  cursor: pointer;
-  border-radius: 4px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgb(210, 214, 218);
-  border-image: initial;
-}
-.propertyCard .cardHeader {
-  width: 100%;
-  display: flex;
-  height: 48px;
-  background-color: rgb(0, 199, 140);
-  z-index: 1;
-  position: relative;
-  -webkit-box-pack: center;
-  justify-content: center;
-  border-radius: 4px 4px 0px 0px;
-  padding: 8px 16px;
-}
-
-.propertyCard .cardHeader .headerLeft {
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  position: relative;
-  min-width: 50px;
-  flex: 1 1 auto;
-}
-
-.propertyCard .cardHeader .headerRight {
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.propertyCard .cardHeader .agentImage {
-  position: absolute;
-  top: 0px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-}
-
-.propertyCard .cardHeader .agentImage > img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgb(210, 214, 218);
-  border-image: initial;
-}
-.propertyCard .cardHeader .agentName {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.13;
-  color: rgb(0, 0, 0);
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  padding-left: 68px;
-  overflow: hidden;
-}
-
-.propertyCard .cardHeader .postedOn {
-  font-size: 10px;
-  font-weight: 300;
-  line-height: normal;
-  color: rgb(0, 0, 0);
-  padding-left: 8px;
-  white-space: nowrap;
-  margin-bottom: -4px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.propertyCard .carouselWrapper > img {
+.carouselWrapper > img {
   width: 100%;
 }
 
-.propertyCard .descriptionWrapper {
+.descriptionWrapper {
   padding: 24px;
 }
 
-.propertyCard .descriptionWrapper .price {
+.descriptionWrapper .price {
   font-size: 20px;
   font-weight: bold;
   line-height: normal;
@@ -96,7 +14,7 @@
   display: flex;
 }
 
-.propertyCard .descriptionWrapper .place {
+.descriptionWrapper .place {
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 18px;
@@ -108,14 +26,14 @@
   overflow: hidden;
 }
 
-.propertyCard .descriptionWrapper .city {
+.descriptionWrapper .city {
   font-size: 14px;
   font-weight: 300;
   line-height: normal;
   color: rgb(51, 63, 72);
 }
 
-.propertyCard .descriptionWrapper .specs {
+.descriptionWrapper .specs {
   font-size: 14px;
   font-weight: 300;
   color: rgb(105, 118, 132);
@@ -128,5 +46,98 @@
   overflow: hidden;
 }
 
-.propertyCard .descriptionWrapper .cardFooter {
+.descriptionWrapper .cardFooter {
+}
+
+.search-list-ul {
+    list-style: none;
+    text-align: left;
+    /*max-width: 1140px;*/
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.search-list-li {
+    font-size: 14px;
+    box-shadow: none;
+    border-radius: 4px;
+    /*border: 1px solid rgb(210, 214, 218);*/
+    cursor: pointer;
+    margin-bottom: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.13;
+    color: rgb(0, 0, 0);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.card-description {
+    font-size: 10px;
+    font-weight: 300;
+    line-height: normal;
+    color: rgb(0, 0, 0);
+    padding-left: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-extra {
+
+}
+
+.ant-card-body {
+    padding: 0 !important;
+}
+
+.ant-card-meta-title {
+    margin-left: 80px;
+}
+
+.ant-card-meta-detail {
+    margin-top: 8px;
+}
+
+.ant-card-extra {
+    padding: 0 0 !important;
+}
+
+.slick-next::before, .slick-prev::before {
+    color: #000000;
+}
+
+.block {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.slick-track-div {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+    width: 15708px;
+}
+
+.slick-track-div2 {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.slick-slide-div {
+    outline: currentcolor none medium;
+}
+
+.slick-slide-div2 {
+    outline: currentcolor none medium;
+    width: 0;
 }

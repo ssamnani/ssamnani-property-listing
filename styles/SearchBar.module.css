@@ -1,5 +1,6 @@
 .searchBarWrapper {
   display: flex;
+  margin-bottom: 16px;
 }
 
 .searchBarWrapper > div {
