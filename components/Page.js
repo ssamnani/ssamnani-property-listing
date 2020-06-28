@@ -34,9 +34,12 @@ function Page() {
 
       <main>
         <SearchBar />
-        {/* <SearchBox /> */}
-        <SearchResult />
-        <MortgageCalculator />
+        <div className="subBodyWrapper">
+          <div className="searchResultsWrapper">
+            <SearchResult />
+            <MortgageCalculator />
+          </div>
+        </div>
       </main>
 
       <Footer />

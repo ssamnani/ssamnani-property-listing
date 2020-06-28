@@ -1,0 +1,132 @@
+.propertyCard {
+  margin-bottom: 20px;
+  font-size: 14px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: none;
+  cursor: pointer;
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(210, 214, 218);
+  border-image: initial;
+}
+.propertyCard .cardHeader {
+  width: 100%;
+  display: flex;
+  height: 48px;
+  background-color: rgb(0, 199, 140);
+  z-index: 1;
+  position: relative;
+  -webkit-box-pack: center;
+  justify-content: center;
+  border-radius: 4px 4px 0px 0px;
+  padding: 8px 16px;
+}
+
+.propertyCard .cardHeader .headerLeft {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  min-width: 50px;
+  flex: 1 1 auto;
+}
+
+.propertyCard .cardHeader .headerRight {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.propertyCard .cardHeader .agentImage {
+  position: absolute;
+  top: 0px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.propertyCard .cardHeader .agentImage > img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(210, 214, 218);
+  border-image: initial;
+}
+.propertyCard .cardHeader .agentName {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.13;
+  color: rgb(0, 0, 0);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-left: 68px;
+  overflow: hidden;
+}
+
+.propertyCard .cardHeader .postedOn {
+  font-size: 10px;
+  font-weight: 300;
+  line-height: normal;
+  color: rgb(0, 0, 0);
+  padding-left: 8px;
+  white-space: nowrap;
+  margin-bottom: -4px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.propertyCard .carouselWrapper > img {
+  width: 100%;
+}
+
+.propertyCard .descriptionWrapper {
+  padding: 24px;
+}
+
+.propertyCard .descriptionWrapper .price {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: normal;
+  color: rgb(51, 63, 72);
+  display: flex;
+}
+
+.propertyCard .descriptionWrapper .place {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: normal;
+  color: rgb(51, 63, 72);
+  margin-bottom: 8px;
+  margin-top: 16px;
+  overflow: hidden;
+}
+
+.propertyCard .descriptionWrapper .city {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: normal;
+  color: rgb(51, 63, 72);
+}
+
+.propertyCard .descriptionWrapper .specs {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgb(105, 118, 132);
+  margin-top: 16px;
+  line-height: 1.57;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.propertyCard .descriptionWrapper .cardFooter {
+}
