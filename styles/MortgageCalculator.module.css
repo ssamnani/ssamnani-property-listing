@@ -1,6 +1,7 @@
 .moCalculator {
   width: 750px;
-  box-shadow: rgb(0, 0, 0, 0.2) 0px 1px 2px 0px;
+  box-shadow: rgb(0, 0, 0, 0.2) 0px 2px 3px 0px;
+  margin-bottom: 30px;
 }
 .moCalculator .mortgageTitleBar {
   background-color: #333f48;
@@ -33,7 +34,7 @@
   flex: 2;
 }
 .moCalculator .moCalcRight {
-  flex: 2.5;
+  flex: 3;
 }
 .moCalculator .moCalcLeft .monthlyAmount {
   width: 100%;
@@ -91,4 +92,9 @@
   position: absolute;
   right: 12px;
   padding: 16px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
