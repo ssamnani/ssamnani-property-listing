@@ -111,9 +111,48 @@ function SearchResult() {
                                 Block 18, Cyberjaya, Cyberjaya, 47130, Selangor
                             </div>
                             <div className="specs">
-                                2-sty Terrace/Link House • Built-up : 3,032 sq. ft.
+                                2-sty Terrace/Link House • Built-up : 3,032 sq. ft. •  Fully Furnished
                             </div>
                             <div className="cardFooter">
+                                <div className="listing-facilities">
+                                    <ul className="attributes-facilities-wrapper">
+                                        <li className="attributes-facilities-item-wrapper">
+                                            <IoIosBed className="bedroom-facility" />3
+                                        </li>
+                                        <li className="attributes-facilities-item-wrapper">
+                                            <FaBath className="bathroom-facility" />2
+                                        </li>
+                                        <li className="attributes-facilities-item-wrapper">
+                                            <RiCarLine className="carPark-facility" />1
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className="save-listing-button">
+                                    <button id="saved-listing-wrapper">
+                                        <AiOutlineStar className="save-icon" id="saved-listing-icon" />
+                                        <span className="save-text">Save</span>
+                                    </button>
+                                </div>
+                                <div className="contact-detail-button">
+                                    <div className="contact-detail-button-first">
+                                        <a className="phone-desktop">
+                                            <FiPhone className="phone-icon" />
+                                            <span className="phone-number">+60162...</span>
+                                        </a>
+                                        <a className="phone-mobile"
+                                           href="tel:+60162672346">
+                                            <FiPhone className="phone-icon" />
+                                            <span>Call agent</span>
+                                        </a>
+                                    </div>
+                                    <div className="contact-detail-button-second">
+                                        <a className="depth-listing-card-link"
+                                            href="https://www.iproperty.com.my/property/kota-damansara/palm-spring-damansara/sale-8946777/">
+                                            View details
+                                            <RightOutlined style={{fontSize: '12px', marginLeft: '2px'}} />
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </Card>

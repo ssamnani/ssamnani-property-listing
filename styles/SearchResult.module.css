@@ -47,6 +47,170 @@
 }
 
 .descriptionWrapper .cardFooter {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.cardFooter .listing-facilities {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    -moz-box-pack: center;
+    justify-content: center;
+}
+
+.listing-facilities .attributes-facilities-wrapper {
+    display: inline-flex;
+    padding-left: 0;
+}
+
+.listing-facilities .attributes-facilities-item-wrapper {
+    float: left;
+    margin-right: 24px;
+    list-style-type: none;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 1px;
+    color: rgb(105, 118, 132);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bedroom-facility {
+    border-radius: 50%;
+    background-color: rgb(247, 248, 249);
+    padding: 4px;
+    margin-right: 4px;
+    font-size: 22px;
+}
+
+.bathroom-facility {
+    border-radius: 50%;
+    background-color: rgb(247, 248, 249);
+    padding: 4px;
+    margin-right: 4px;
+    font-size: 22px;
+}
+
+.carPark-facility {
+    border-radius: 50%;
+    background-color: rgb(247, 248, 249);
+    padding: 4px;
+    margin-right: 4px;
+    font-size: 22px;
+}
+
+.save-listing-button {
+    flex: 0 0 auto;
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: end;
+    justify-content: flex-end;
+}
+
+.save-listing-button button {
+    font-weight: 300;
+    color: rgb(51, 63, 72);
+    margin-right: 24px;
+    font-size: 14px;
+    line-height: normal;
+    padding: 0px;
+    border: medium none;
+    outline: currentcolor none medium;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.save-listing-button .save-icon {
+    font-weight: 300;
+    color: rgb(51, 63, 72);
+    font-size: 16px;
+    line-height: normal;
+}
+
+.save-listing-button .save-text {
+    margin-left: 2px;
+}
+
+.contact-detail-button {
+    width: auto;
+    display: flex;
+}
+
+.contact-detail-button-first {
+    height: 40px;
+    width: 124px;
+    border: 1px solid rgb(210, 214, 218);
+    border-radius: 8px 0 0 8px;
+    border-right: medium none;
+}
+
+.contact-detail-button-second {
+    height: 40px;
+    width: 124px;
+    border: 1px solid rgb(210, 214, 218);
+    border-radius: 0 8px 8px 0;
+}
+
+.phone-desktop {
+    width: auto;
+    height: 100%;
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    color: rgb(43, 110, 210) !important;
+}
+
+.phone-mobile {
+    display: none;
+    width: auto;
+    height: 100%;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    color: rgb(43, 110, 210) !important;
+}
+
+.phone-icon {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: normal;
+    color: rgb(43, 110, 210) !important;
+}
+
+.phone-number {
+    margin-left: 2px;
+}
+
+.depth-listing-card-link {
+    width: auto;
+    height: 100%;
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    color: rgb(43, 110, 210) !important;
 }
 
 .search-list-ul {
