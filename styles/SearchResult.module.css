@@ -1,3 +1,7 @@
+.search-result-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 6px 0px !important;
+}
+
 .carouselWrapper > img {
   width: 100%;
   min-height: 100%;
@@ -50,6 +54,17 @@
   overflow: hidden;
 }
 
+.descriptionWrapper .specs > ul {
+  display: flex;
+  padding-left: 0;
+}
+.descriptionWrapper .specs > ul > li {
+  margin-right: 1.8em;
+  list-style: disc;
+}
+.descriptionWrapper .specs > ul > li:first-of-type {
+  list-style: none;
+}
 .descriptionWrapper .cardFooter {
   width: 100%;
   display: flex;

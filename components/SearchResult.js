@@ -68,9 +68,11 @@ function SearchResult() {
             organisations,
             prices,
             address: { formattedAddress = "" } = {},
-            attributes: { bedroom = "", bathroom = "", carPark = "" },
             propertyType,
             attributes: {
+              bedroom = "",
+              bathroom = "",
+              carPark = "",
               builtUp = "",
               landArea = "",
               landTitleType = "",
@@ -79,8 +81,8 @@ function SearchResult() {
               sizeUnit = "",
               furnishing = "",
             },
+            medias = [],
           } = item;
-
           let agentName = "";
           let agentPhone = "";
           let agentImage = "";
@@ -147,30 +149,25 @@ function SearchResult() {
                   />
                 }
                 loading={false}
-                style={{ width: 750 }}
+                style={{
+                  width: 750,
+                  border: "1px solid rgb(210, 214, 218)",
+                  borderRadius: "4px",
+                }}
+                className="search-result-card"
               >
                 <Slider {...settings}>
-                  <div className="carouselWrapper">
-                    <img
-                      className="carouselImage"
-                      src="https://img.rea-asia.com/my-subsale/premium/750x560-fit/realtors/images/640/35327/c1e81b7953ef4a63a8143f6d66074ade.jpg"
-                      alt="1"
-                    />
-                  </div>
-                  <div className="carouselWrapper">
-                    <img
-                      className="carouselImage"
-                      src="https://img.rea-asia.com/my-subsale/premium/750x560-fit/realtors/images/640/35327/c1e81b7953ef4a63a8143f6d66074ade.jpg"
-                      alt="2"
-                    />
-                  </div>
-                  <div className="carouselWrapper">
-                    <img
-                      className="carouselImage"
-                      src="https://img.rea-asia.com/my-subsale/premium/750x560-fit/realtors/images/640/35327/c1e81b7953ef4a63a8143f6d66074ade.jpg"
-                      alt="3"
-                    />
-                  </div>
+                  {medias.map((image) => {
+                    return (
+                      <div className="carouselWrapper">
+                        <img
+                          className="carouselImage"
+                          src={image.thumbnailUrl || ""}
+                          alt="1"
+                        />
+                      </div>
+                    );
+                  })}
                 </Slider>
 
                 <div className="descriptionWrapper">
@@ -178,15 +175,24 @@ function SearchResult() {
                     {currencyMapper(currency)} {minPrice}
                   </div>
                   <div className="place">{title}</div>
-                  <div className="city">{formattedAddress}</div>
+                  {formattedAddress && (
+                    <div className="city">{formattedAddress}</div>
+                  )}
                   <div className="specs">
-                    <span>{propertyType}</span>
-                    <span>{landArea && ` • Land Area : ${landArea} `}</span>
-                    <span>
-                      {builtUp && ` • Built-up : ${builtUp} `}
-                      <span>{getPropertySizeUnitMapping("SQUARE_FEET")}</span>
-                    </span>
-                    <span>{furnishing && ` • ${furnishing}`}</span>
+                    <ul>
+                      <li>
+                        {propertyType}
+                        {unitType && ` | ${unitType} `}
+                      </li>
+                      {landArea && builtUp === "" && (
+                        <li>Land Area : ${landArea} </li>
+                      )}
+                      <li>
+                        {builtUp && `Built-up : ${builtUp} `}
+                        <span>{getPropertySizeUnitMapping("SQUARE_FEET")}</span>
+                      </li>
+                      {furnishing && <li>{`${furnishing}`}</li>}
+                    </ul>
                   </div>
                   <div className="cardFooter">
                     <div className="listing-facilities">
