@@ -33,14 +33,29 @@ function SearchResult() {
   const { items } = searchResult;
 
   const currencyMapper = (currency) => {
+    let mapping = "";
     switch (currency) {
       case "MYR":
-        return "RM";
+        mapping = "RM";
         break;
       default:
-        return currency;
+        mapping = currency;
         break;
     }
+    return mapping;
+  };
+
+  const getPropertySizeUnitMapping = (unitStr) => {
+    let mapping = "";
+    switch (unitStr) {
+      case "SQUARE_FEET":
+        mapping = "sq. ft.";
+        break;
+      default:
+        mapping = unitStr;
+        break;
+    }
+    return mapping;
   };
 
   return (
@@ -54,6 +69,15 @@ function SearchResult() {
             prices,
             address: { formattedAddress = "" } = {},
             attributes: { bedroom = "", bathroom = "", carPark = "" },
+            propertyType,
+            attributes: {
+              builtUp = "",
+              landTitleType = "",
+              tenure = "",
+              unitType = "",
+              sizeUnit = "",
+              furnishing = "",
+            },
           } = item;
 
           let agentName = "";
@@ -155,8 +179,9 @@ function SearchResult() {
                   <div className="place">{title}</div>
                   <div className="city">{formattedAddress}</div>
                   <div className="specs">
-                    2-sty Terrace/Link House • Built-up : 3,032 sq. ft. • Fully
-                    Furnished
+                    {propertyType} • Built-up : {builtUp}{" "}
+                    {getPropertySizeUnitMapping("SQUARE_FEET")}{" "}
+                    {furnishing && `• ${furnishing}`}
                   </div>
                   <div className="cardFooter">
                     <div className="listing-facilities">
