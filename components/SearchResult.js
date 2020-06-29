@@ -72,6 +72,7 @@ function SearchResult() {
             propertyType,
             attributes: {
               builtUp = "",
+              landArea = "",
               landTitleType = "",
               tenure = "",
               unitType = "",
@@ -179,9 +180,13 @@ function SearchResult() {
                   <div className="place">{title}</div>
                   <div className="city">{formattedAddress}</div>
                   <div className="specs">
-                    {propertyType} • Built-up : {builtUp}{" "}
-                    {getPropertySizeUnitMapping("SQUARE_FEET")}{" "}
-                    {furnishing && `• ${furnishing}`}
+                    <span>{propertyType}</span>
+                    <span>{landArea && ` • Land Area : ${landArea} `}</span>
+                    <span>
+                      {builtUp && ` • Built-up : ${builtUp} `}
+                      <span>{getPropertySizeUnitMapping("SQUARE_FEET")}</span>
+                    </span>
+                    <span>{furnishing && ` • ${furnishing}`}</span>
                   </div>
                   <div className="cardFooter">
                     <div className="listing-facilities">
