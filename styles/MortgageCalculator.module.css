@@ -1,0 +1,106 @@
+.moCalculator {
+  width: 750px;
+  box-shadow: rgb(0, 0, 0, 0.2) 0px 2px 3px 0px;
+  margin-bottom: 30px;
+}
+.moCalculator .mortgageTitleBar {
+  background-color: #333f48;
+  display: flex;
+  padding: 8px 8px;
+  height: 55px;
+}
+.moCalculator .mortgageTitleBar .companyLogoWrap {
+  position: relative;
+}
+.moCalculator .mortgageTitleBar .companyLogoWrap > img {
+  position: absolute;
+  right: 10px;
+  top: 6px;
+}
+.moCalculator .mortgageTitleBar > span {
+  flex: 1;
+}
+.moCalculator .mortgageTitleBar .morgCalcTitle {
+  padding: 6px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+.moCalculator .moCalcBody {
+  display: flex;
+  padding: 24px 24px 40px;
+  border-bottom: 1px solid rgb(233, 235, 237);
+}
+.moCalculator .moCalcLeft {
+  flex: 2;
+}
+.moCalculator .moCalcRight {
+  flex: 3;
+}
+.moCalculator .moCalcLeft .monthlyAmount {
+  width: 100%;
+  min-width: 40%;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: rgb(32, 40, 46);
+}
+.moCalculator .moCalcLeft .monthlyAmount .pm {
+  font-size: 12px;
+  margin-left: 5px;
+}
+.moCalculator .moCalcLeft .loanAmount {
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: rgb(51, 63, 72);
+  line-height: 18px;
+}
+.moCalculator .moCalcLeft Input {
+  width: 100px;
+}
+.moCalculator .moCalcRight .moInputWrap {
+  display: flex;
+  margin-bottom: 5px;
+}
+.moCalculator .moCalcRight .moInputWrap .moInpLabel {
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: rgb(51, 63, 72);
+  line-height: 18px;
+}
+
+.moCalculator .moCalcRight .moInputWrap > div {
+  flex: 1;
+}
+.moCalculator .disclaimerWrap {
+  display: flex;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  min-height: 96px;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 24px;
+  position: relative;
+}
+
+.moCalculator .disclaimerWrap .disclaimerText {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgb(105, 118, 132);
+  position: absolute;
+  right: 12px;
+  padding: 16px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.downPaymentInputsWrapper {
+  display: flex;
+  width: 80px;
+  flex-direction: row;
+}

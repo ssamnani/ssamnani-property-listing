@@ -1,0 +1,17 @@
+.searchBarWrapper {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.searchBarWrapper > div {
+}
+
+.searchBarWrapper .statesDropdown {
+  flex: 1.2;
+}
+.searchBarWrapper .searchBoxWrapper {
+  flex: 14.8;
+}
+.searchBarWrapper .saleRentToggle {
+  flex: 1.8;
+}

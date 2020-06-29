@@ -1,0 +1,49 @@
+.paginationWrapper {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin: 0;
+  padding-top: 10px;
+  border-top: 1px solid rgb(165, 173, 181);
+}
+.paginationWrapper .paginationText {
+  font-size: 14px;
+  font-weight: 300;
+  height: 49px;
+  margin-bottom: auto;
+  color: rgb(105, 118, 132);
+  display: inline-flex;
+  align-items: flex-end;
+  line-height: 32px;
+}
+.paginationWrapper .paginationButtons {
+  display: flex;
+  flex-direction: row;
+}
+.paginationWrapper .paginationButtons > ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.paginationWrapper .paginationButtons > ul > li {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(255, 255, 255);
+  margin-right: 8px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 3px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(165, 173, 181);
+  border-image: initial;
+}
+.paginationWrapper .paginationButtons > ul > li.active {
+  background-color: rgb(105, 118, 132);
+  color: #fff;
+}

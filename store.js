@@ -5,33 +5,20 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 let store
 
 const initialState = {
-    lastUpdate: 0,
-    light: false,
-    count: 0,
+    searchResult: {},
 }
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'TICK':
+        case 'STORE':
             return {
                 ...state,
-                lastUpdate: action.lastUpdate,
-                light: !!action.light,
-            }
-        case 'INCREMENT':
-            return {
-                ...state,
-                count: state.count + 1,
-            }
-        case 'DECREMENT':
-            return {
-                ...state,
-                count: state.count - 1,
+                searchResult: action.searchResult,
             }
         case 'RESET':
             return {
                 ...state,
-                count: initialState.count,
+                searchResult: initialState.searchResult,
             }
         default:
             return state
