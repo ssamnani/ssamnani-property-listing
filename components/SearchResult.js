@@ -269,10 +269,9 @@ function SearchResult() {
                         id="saved-listing-wrapper"
                         onClick={() => saveProperty(item.id)}
                       >
-                        {savedPropertyIds[item.id] && (
+                        {savedPropertyIds[item.id] ? (
                           <AiFillStar className="save-icon" />
-                        )}
-                        {!savedPropertyIds[item.id] && (
+                        ) : (
                           <AiOutlineStar
                             className="save-icon"
                             id="saved-listing-icon"
