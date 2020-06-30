@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Card, Avatar } from "antd";
 import { LeftOutlined, RightOutlined, UserOutlined } from "@ant-design/icons";
 import { FaBath } from "react-icons/fa";
 import { IoIosBed } from "react-icons/io";
 import { RiCarLine } from "react-icons/ri";
-import { AiOutlineStar } from "react-icons/ai";
+import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import { FiPhone } from "react-icons/fi";
 import Slider from "react-slick";
 import { isEmpty } from "lodash";
@@ -13,6 +13,7 @@ import "../styles/SearchResult.module.css";
 
 function SearchResult() {
   const { Meta } = Card;
+  const [savedPropertyIds, setSavedPropertyIds] = useState({});
   //   const SampleNextArrow = (props) => {
   //     const { className, style, onClick } = props;
   //     return (
@@ -59,6 +60,33 @@ function SearchResult() {
     return mapping;
   };
 
+  let localStorage = {};
+  const getSavedPropertyIds = () => {
+    const savedProperties =
+      JSON.parse(localStorage.getItem("savedProperties")) || {};
+    return savedProperties;
+  };
+
+  let saveProperty = (propertyId) => {
+    const savedProperties =
+      JSON.parse(localStorage.getItem("savedProperties")) || {};
+    if (savedProperties[propertyId]) {
+      delete savedProperties[propertyId];
+    } else {
+      savedProperties[propertyId] = true;
+    }
+    setSavedPropertyIds(savedProperties);
+    localStorage.setItem("savedProperties", JSON.stringify(savedProperties));
+  };
+
+  useEffect(() => {
+    localStorage = window.localStorage;
+  });
+
+  useEffect(() => {
+    setSavedPropertyIds(getSavedPropertyIds());
+  }, []);
+
   return (
     <div className="search-list">
       <ul className="search-list-ul">
@@ -68,7 +96,7 @@ function SearchResult() {
             listers,
             organisations,
             prices,
-            cover: { url: coverUrl = '' } = {},
+            cover: { url: coverUrl = "" } = {},
             medias = [],
             address: { formattedAddress = "" } = {},
             propertyType,
@@ -94,7 +122,7 @@ function SearchResult() {
           const {
             logo: { thumbnailUrl: orgThumbnailUrl = "" } = {},
             name: orgName = "",
-            contact: { phones: { number: orgNumber = "" } = {} } = {}
+            contact: { phones: { number: orgNumber = "" } = {} } = {},
           } = organisations[0];
 
           if (listers !== undefined) {
@@ -128,7 +156,9 @@ function SearchResult() {
                           style={{
                             border: "1px solid rgb(210, 214, 218)",
                             position: "absolute",
-                            backgroundColor: isEmpty(agentImage) ? "#236a9a" : "white",
+                            backgroundColor: isEmpty(agentImage)
+                              ? "#236a9a"
+                              : "white",
                             zIndex: 10,
                           }}
                         />
@@ -167,40 +197,35 @@ function SearchResult() {
                 className="search-result-card"
               >
                 <Slider {...settings}>
-                  {
-                    !isEmpty(coverUrl) &&
+                  {!isEmpty(coverUrl) && (
                     <div className="carouselWrapper">
                       <img
-                          className="carouselImage"
-                          src={coverUrl}
-                          alt="coverImage"
+                        className="carouselImage"
+                        src={coverUrl}
+                        alt="coverImage"
                       />
                     </div>
-                  }
-                  {
-                    !isEmpty(medias) &&
+                  )}
+                  {!isEmpty(medias) &&
                     medias.map((item, index) => {
-                      const { url: imageUrl = '' } = item;
+                      const { url: imageUrl = "" } = item;
                       return (
-                          <div key={index} className="carouselWrapper">
-                            <img
-                                className="carouselImage"
-                                src={imageUrl}
-                                alt={"image-" + index}
-                            />
-                          </div>
-                      )
-                    })
-                  }
+                        <div key={index} className="carouselWrapper">
+                          <img
+                            className="carouselImage"
+                            src={imageUrl}
+                            alt={"image-" + index}
+                          />
+                        </div>
+                      );
+                    })}
                 </Slider>
 
                 <div className="descriptionWrapper">
                   <div className="price">
-                    {
-                      (minPrice === 0) ?
-                          'Contact for price' :
-                          currencyMapper(currency) + ' ' + minPrice
-                    }
+                    {minPrice === 0
+                      ? "Contact for price"
+                      : currencyMapper(currency) + " " + minPrice}
                   </div>
                   <div className="place">{title}</div>
                   {formattedAddress && (
@@ -240,11 +265,19 @@ function SearchResult() {
                       </ul>
                     </div>
                     <div className="save-listing-button">
-                      <button id="saved-listing-wrapper">
-                        <AiOutlineStar
-                          className="save-icon"
-                          id="saved-listing-icon"
-                        />
+                      <button
+                        id="saved-listing-wrapper"
+                        onClick={() => saveProperty(item.id)}
+                      >
+                        {savedPropertyIds[item.id] && (
+                          <AiFillStar className="save-icon" />
+                        )}
+                        {!savedPropertyIds[item.id] && (
+                          <AiOutlineStar
+                            className="save-icon"
+                            id="saved-listing-icon"
+                          />
+                        )}
                         <span className="save-text">Save</span>
                       </button>
                     </div>
