@@ -1,12 +1,13 @@
 import React from "react";
 import { Card, Avatar } from "antd";
-import { LeftOutlined, RightOutlined } from "@ant-design/icons";
+import { LeftOutlined, RightOutlined, UserOutlined } from "@ant-design/icons";
 import { FaBath } from "react-icons/fa";
 import { IoIosBed } from "react-icons/io";
 import { RiCarLine } from "react-icons/ri";
 import { AiOutlineStar } from "react-icons/ai";
 import { FiPhone } from "react-icons/fi";
 import Slider from "react-slick";
+import { isEmpty } from "lodash";
 import { useSelector } from "react-redux";
 import "../styles/SearchResult.module.css";
 
@@ -67,6 +68,8 @@ function SearchResult() {
             listers,
             organisations,
             prices,
+            cover: { url: coverUrl = '' } = {},
+            medias = [],
             address: { formattedAddress = "" } = {},
             propertyType,
             attributes: {
@@ -81,12 +84,18 @@ function SearchResult() {
               sizeUnit = "",
               furnishing = "",
             },
-            medias = [],
           } = item;
+
           let agentName = "";
           let agentPhone = "";
           let agentImage = "";
           let orgLogoUrl = "";
+
+          const {
+            logo: { thumbnailUrl: orgThumbnailUrl = "" } = {},
+            name: orgName = "",
+            contact: { phones: { number: orgNumber = "" } = {} } = {}
+          } = organisations[0];
 
           if (listers !== undefined) {
             const {
@@ -94,13 +103,13 @@ function SearchResult() {
               contact: { phones: { number = "" } = {} } = {},
               image: { thumbnailUrl = null } = {},
             } = listers[0];
-            const {
-              logo: { thumbnailUrl: orgThumbnailUrl = "" } = {},
-            } = organisations[0];
             agentName = name;
             agentPhone = number;
             agentImage = thumbnailUrl;
             orgLogoUrl = orgThumbnailUrl;
+          } else {
+            agentName = orgName;
+            agentPhone = orgNumber;
           }
 
           const { currency, min: minPrice } = prices[0];
@@ -114,11 +123,12 @@ function SearchResult() {
                       avatar={
                         <Avatar
                           size={64}
-                          src={agentImage}
+                          src={isEmpty(agentImage) ? null : agentImage}
+                          icon={isEmpty(agentImage) ? <UserOutlined /> : null}
                           style={{
                             border: "1px solid rgb(210, 214, 218)",
                             position: "absolute",
-                            backgroundColor: "white",
+                            backgroundColor: isEmpty(agentImage) ? "#236a9a" : "white",
                             zIndex: 10,
                           }}
                         />
@@ -157,22 +167,40 @@ function SearchResult() {
                 className="search-result-card"
               >
                 <Slider {...settings}>
-                  {medias.map((image) => {
-                    return (
-                      <div className="carouselWrapper">
-                        <img
+                  {
+                    !isEmpty(coverUrl) &&
+                    <div className="carouselWrapper">
+                      <img
                           className="carouselImage"
-                          src={image.thumbnailUrl || ""}
-                          alt="1"
-                        />
-                      </div>
-                    );
-                  })}
+                          src={coverUrl}
+                          alt="coverImage"
+                      />
+                    </div>
+                  }
+                  {
+                    !isEmpty(medias) &&
+                    medias.map((item, index) => {
+                      const { url: imageUrl = '' } = item;
+                      return (
+                          <div key={index} className="carouselWrapper">
+                            <img
+                                className="carouselImage"
+                                src={imageUrl}
+                                alt={"image-" + index}
+                            />
+                          </div>
+                      )
+                    })
+                  }
                 </Slider>
 
                 <div className="descriptionWrapper">
                   <div className="price">
-                    {currencyMapper(currency)} {minPrice}
+                    {
+                      (minPrice === 0) ?
+                          'Contact for price' :
+                          currencyMapper(currency) + ' ' + minPrice
+                    }
                   </div>
                   <div className="place">{title}</div>
                   {formattedAddress && (
