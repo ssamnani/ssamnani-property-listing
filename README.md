@@ -8,6 +8,8 @@ This application has been developed to demonstrate Frontend coding skills in Rea
 
 Data is fetched from `/api/search-result` endpoint which returns response from static file and furnished using `getStaticProps()` and `useSelector()`.
 
+Supports Desktop only, not responsive
+
 ### Features
 
 This web app consists of 1 page and displays property listings showing 20 records.
