@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="moCalculator"
+>
+  <div
+    className="mortgageTitleBar"
+  >
+    <span
+      className="morgCalcTitle"
+    >
+      Mortgage Calculator
+    </span>
+    <span
+      className="companyLogoWrap"
+    >
+      <img
+        src="./assets/images/iproperty-logo-black.png"
+      />
+    </span>
+  </div>
+  <div
+    className="moCalcBody"
+  >
+    <div
+      className="moCalcLeft"
+    >
+      <div
+        className="monthlyAmount"
+      >
+        <span
+          data-testid="monthly-amount"
+        >
+          RM 
+          1886
+        </span>
+        <span
+          className="pm"
+        >
+          p/m
+        </span>
+      </div>
+      <div
+        className="loanAmount"
+      >
+        <span
+          data-testid="loan-amount"
+        >
+          Loan Amount: RM 
+          450000
+        </span>
+      </div>
+    </div>
+    <div
+      className="moCalcRight"
+    >
+      <div
+        className="moInputWrap"
+      >
+        <div>
+          <div
+            className="moInpLabel"
+          >
+            Property Price (RM)
+          </div>
+          <input
+            className="ant-input"
+            data-testid="property-price"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            style={
+              Object {
+                "backgroundColor": "rgb(243, 244, 246)",
+                "width": 200,
+              }
+            }
+            type="number"
+            value={500000}
+          />
+        </div>
+        <div>
+          <div
+            className="moInpLabel"
+          >
+            Down Payment
+          </div>
+          <div
+            className="downPaymentInputsWrapper"
+          >
+            <input
+              className="ant-input"
+              data-testid="down-payment"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "rgb(243, 244, 246)",
+                  "minWidth": "100px",
+                  "width": 120,
+                }
+              }
+              type="number"
+              value={10}
+            />
+            <div
+              className="downPaymentToggle"
+            >
+              <button
+                className=""
+                onClick={[Function]}
+              >
+                RM
+              </button>
+              <button
+                className="selected"
+                onClick={[Function]}
+              >
+                %
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="moInputWrap"
+      >
+        <div>
+          <div
+            className="moInpLabel"
+          >
+            Interest Rate (%)
+          </div>
+          <input
+            className="ant-input"
+            data-testid="interest-rate"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            style={
+              Object {
+                "backgroundColor": "rgb(243, 244, 246)",
+                "width": 200,
+              }
+            }
+            type="number"
+            value={3.6}
+          />
+        </div>
+        <div>
+          <div
+            className="moInpLabel"
+          >
+            Loan term (Years)
+          </div>
+          <input
+            className="ant-input"
+            data-testid="loan-years"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            style={
+              Object {
+                "backgroundColor": "rgb(243, 244, 246)",
+                "width": 200,
+              }
+            }
+            type="number"
+            value={35}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="disclaimerWrap"
+  >
+    <span
+      className="disclaimerText"
+    >
+      Please read the disclaimer &gt;
+    </span>
+  </div>
+</div>
+`;
