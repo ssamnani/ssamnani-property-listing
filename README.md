@@ -1,4 +1,4 @@
-# iProperty Front End Code Test
+# Front End Coding Test
 
 ## Overview
 
@@ -60,8 +60,6 @@ yarn test
 ```bash
 yarn coverage
 ```
-
-Coverage Screenshot: /docs/images/coverage
 
 ## Room for Improvements
 
