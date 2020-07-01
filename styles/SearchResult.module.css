@@ -154,6 +154,10 @@
     justify-content: center;
 }
 
+.save-listing-button:hover button, .save-listing-button:hover svg {
+    color: rgb(43, 110, 210);
+}
+
 .save-listing-button .save-icon {
     font-weight: 300;
     color: rgb(51, 63, 72);
@@ -222,6 +226,13 @@
 
 .phone-number {
     margin-left: 2px;
+    text-overflow: ellipsis;
+    width: 64px;
+    overflow: hidden;
+}
+
+.phone-number:hover {
+    width: auto;
 }
 
 .depth-listing-card-link {

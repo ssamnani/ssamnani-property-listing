@@ -122,13 +122,13 @@ function SearchResult() {
           const {
             logo: { thumbnailUrl: orgThumbnailUrl = "" } = {},
             name: orgName = "",
-            contact: { phones: { number: orgNumber = "" } = {} } = {},
+            contact: { phones: [{ number: orgNumber = "" } = {}] = [] } = {},
           } = organisations[0];
 
           if (listers !== undefined) {
             const {
               name = "",
-              contact: { phones: { number = "" } = {} } = {},
+              contact: { phones: [{ number = "" }] = {} } = {},
               image: { thumbnailUrl = null } = {},
             } = listers[0];
             agentName = name;
@@ -143,7 +143,7 @@ function SearchResult() {
           const { currency, min: minPrice } = prices[0];
 
           return (
-            <React.Fragment>
+            <React.Fragment key={index}>
               {index < 20 && (
                 <li key={index} className="search-list-li">
                   <Card
@@ -244,12 +244,14 @@ function SearchResult() {
                           {landArea && builtUp === "" && (
                             <li>Land Area : ${landArea} </li>
                           )}
-                          <li>
-                            {builtUp && `Built-up : ${builtUp} `}
-                            <span>
-                              {getPropertySizeUnitMapping("SQUARE_FEET")}
-                            </span>
-                          </li>
+                          {builtUp && (
+                            <li>
+                              <span>`Built-up : ${builtUp} `</span>
+                              <span>
+                                {getPropertySizeUnitMapping("SQUARE_FEET")}
+                              </span>
+                            </li>
+                          )}
                           {furnishing && <li>{`${furnishing}`}</li>}
                         </ul>
                       </div>
@@ -290,7 +292,7 @@ function SearchResult() {
                           <div className="contact-detail-button-first">
                             <a className="phone-desktop">
                               <FiPhone className="phone-icon" />
-                              <span className="phone-number">+60162...</span>
+                              <span className="phone-number">{agentPhone}</span>
                             </a>
                             <a
                               className="phone-mobile"

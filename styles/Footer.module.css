@@ -141,11 +141,11 @@ li:first-child {
 }
 
 #footer.global-footer.hfs .app-store-links .app-store
-svg {
+img {
     width: 126px
 }
 
-#footer.global-footer.hfs .app-store-links .google-play svg {
+#footer.global-footer.hfs .app-store-links .google-play img {
     width: 134px
 }
 
