@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="ant-radio-group ant-radio-group-solid ant-radio-group-large"
+>
+  <label
+    className="ant-radio-button-wrapper ant-radio-button-wrapper-checked"
+  >
+    <span
+      className="ant-radio-button ant-radio-button-checked"
+      style={Object {}}
+    >
+      <input
+        checked={true}
+        className="ant-radio-button-input"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="radio"
+        value="sale"
+      />
+      <span
+        className="ant-radio-button-inner"
+      />
+    </span>
+    <span>
+      Sale
+    </span>
+  </label>
+  <label
+    className="ant-radio-button-wrapper"
+  >
+    <span
+      className="ant-radio-button"
+      style={Object {}}
+    >
+      <input
+        checked={false}
+        className="ant-radio-button-input"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="radio"
+        value="rent"
+      />
+      <span
+        className="ant-radio-button-inner"
+      />
+    </span>
+    <span>
+      Rent
+    </span>
+  </label>
+</div>
+`;

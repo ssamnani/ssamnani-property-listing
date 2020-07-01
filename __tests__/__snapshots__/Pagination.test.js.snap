@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="paginationWrapper"
+>
+  <div
+    className="paginationInfo"
+  >
+    Viewing 
+    1
+    -
+    20
+     of 
+    43543
+     property results
+  </div>
+  <div
+    className="paginationButtons"
+  >
+    <ul>
+      <li
+        className="active"
+      >
+        1
+      </li>
+      <li>
+        2
+      </li>
+      <li>
+        3
+      </li>
+      <li>
+        4
+      </li>
+      <li>
+        &gt;
+      </li>
+    </ul>
+  </div>
+</div>
+`;

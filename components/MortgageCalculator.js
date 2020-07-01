@@ -65,7 +65,11 @@ function MortgageCalculator() {
   };
 
   const handleMetricChange = (val) => {
+    if (val === downPaymentMetric) return;
     setDownPaymentMetric(val);
+    val === "%"
+      ? setDownPayment((downPayment / propertyPrice) * 100)
+      : setDownPayment((downPayment * propertyPrice) / 100);
   };
 
   return (
@@ -79,11 +83,11 @@ function MortgageCalculator() {
       <div className="moCalcBody">
         <div className="moCalcLeft">
           <div className="monthlyAmount">
-            <span>RM {monthlyAmount}</span>
+            <span data-testid="monthly-amount">RM {monthlyAmount}</span>
             <span className="pm">p/m</span>
           </div>
           <div className="loanAmount">
-            <span>Loan Amount: RM {loanAmount}</span>
+            <span data-testid="loan-amount">Loan Amount: RM {loanAmount}</span>
           </div>
         </div>
         <div className="moCalcRight">
@@ -95,6 +99,7 @@ function MortgageCalculator() {
                 style={inputStyleWide}
                 value={propertyPrice}
                 onChange={handlePropertyPriceChange}
+                data-testid="property-price"
               />
             </div>
             <div>
@@ -105,10 +110,12 @@ function MortgageCalculator() {
                   style={inputStyleSmall}
                   value={downPayment}
                   onChange={handleDownPaymentChange}
+                  data-testid="down-payment"
                 />
                 <MortgageDownPaymentMetricToggle
                   metric={downPaymentMetric}
                   onChangeMetric={handleMetricChange}
+                  data-testid="down-payment-metric"
                 />
               </div>
             </div>
@@ -121,6 +128,7 @@ function MortgageCalculator() {
                 style={inputStyleWide}
                 value={interestRate}
                 onChange={handleInterestRateChange}
+                data-testid="interest-rate"
               />
             </div>
             <div>
@@ -130,6 +138,7 @@ function MortgageCalculator() {
                 style={inputStyleWide}
                 value={loanYears}
                 onChange={handleLoanYearsChange}
+                data-testid="loan-years"
               />
             </div>
           </div>

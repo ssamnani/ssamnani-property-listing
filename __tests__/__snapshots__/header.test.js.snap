@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div>
+  <div
+    className="appHeader"
+  >
+    <div
+      className="navWrapper"
+    >
+      <img
+        alt="iproperty-logo"
+        className="logo"
+        src="/assets/images/iproperty-logo.png"
+      />
+      <div>
+        <div
+          className="headerTabs"
+        >
+          <ul>
+            <li>
+              <a
+                className="active"
+              >
+                Buy
+              </a>
+            </li>
+            <li>
+              <a>
+                Rent
+              </a>
+            </li>
+            <li>
+              <a>
+                New Launches
+              </a>
+            </li>
+            <li>
+              <a>
+                Advertise
+              </a>
+            </li>
+            <li>
+              <a>
+                News & Lifestyle
+              </a>
+            </li>
+            <li>
+              <a>
+                Events
+              </a>
+            </li>
+            <li>
+              <a>
+                International
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div
+      className="breadcrumbWrapper"
+    >
+      <ol>
+        <li>
+          Home
+        </li>
+        <li>
+          Sale
+        </li>
+        <li>
+          All Residential
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,198 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="searchBarWrapper"
+>
+  <div
+    className="statesDropdown"
+  >
+    <div
+      className="ant-select ant-select-lg ant-select-single ant-select-show-arrow"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      style={
+        Object {
+          "width": 200,
+        }
+      }
+    >
+      <div
+        className="ant-select-selector"
+        onClick={[Function]}
+        onMouseDown={[Function]}
+      >
+        <span
+          className="ant-select-selection-search"
+        >
+          <input
+            aria-activedescendant="undefined_list_0"
+            aria-autocomplete="list"
+            aria-controls="undefined_list"
+            aria-haspopup="listbox"
+            aria-owns="undefined_list"
+            autoComplete="off"
+            className="ant-select-selection-search-input"
+            onChange={[Function]}
+            onCompositionEnd={[Function]}
+            onCompositionStart={[Function]}
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onPaste={[Function]}
+            readOnly={true}
+            role="combobox"
+            style={
+              Object {
+                "opacity": 0,
+              }
+            }
+            unselectable="on"
+            value=""
+          />
+        </span>
+        <span
+          className="ant-select-selection-item"
+        >
+          All States
+        </span>
+      </div>
+      <span
+        aria-hidden={true}
+        className="ant-select-arrow"
+        onMouseDown={[Function]}
+        style={
+          Object {
+            "WebkitUserSelect": "none",
+            "userSelect": "none",
+          }
+        }
+        unselectable="on"
+      >
+        <span
+          aria-label="down"
+          className="anticon anticon-down"
+          role="img"
+        >
+          <svg
+            aria-hidden="true"
+            className=""
+            data-icon="down"
+            fill="currentColor"
+            focusable="false"
+            height="1em"
+            viewBox="64 64 896 896"
+            width="1em"
+          >
+            <path
+              d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+            />
+          </svg>
+        </span>
+      </span>
+    </div>
+  </div>
+  <div
+    className="searchBoxWrapper"
+  >
+    <span
+      className="ant-input-affix-wrapper ant-input-affix-wrapper-lg"
+      onMouseUp={[Function]}
+    >
+      <span
+        className="ant-input-prefix"
+      >
+        <span
+          aria-label="search"
+          className="anticon anticon-search"
+          role="img"
+        >
+          <svg
+            aria-hidden="true"
+            className=""
+            data-icon="search"
+            fill="currentColor"
+            focusable="false"
+            height="1em"
+            viewBox="64 64 896 896"
+            width="1em"
+          >
+            <path
+              d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0011.6 0l43.6-43.5a8.2 8.2 0 000-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z"
+            />
+          </svg>
+        </span>
+      </span>
+      <input
+        className="ant-input ant-input-lg"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        placeholder="Search by Locations, Train stations, Neighbourhoods or Property name"
+        style={null}
+        type="text"
+        value=""
+      />
+    </span>
+  </div>
+  <div
+    className="saleRentToggle"
+  >
+    <div
+      className="ant-radio-group ant-radio-group-solid ant-radio-group-large"
+    >
+      <label
+        className="ant-radio-button-wrapper ant-radio-button-wrapper-checked"
+      >
+        <span
+          className="ant-radio-button ant-radio-button-checked"
+          style={Object {}}
+        >
+          <input
+            checked={true}
+            className="ant-radio-button-input"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            type="radio"
+            value="sale"
+          />
+          <span
+            className="ant-radio-button-inner"
+          />
+        </span>
+        <span>
+          Sale
+        </span>
+      </label>
+      <label
+        className="ant-radio-button-wrapper"
+      >
+        <span
+          className="ant-radio-button"
+          style={Object {}}
+        >
+          <input
+            checked={false}
+            className="ant-radio-button-input"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            type="radio"
+            value="rent"
+          />
+          <span
+            className="ant-radio-button-inner"
+          />
+        </span>
+        <span>
+          Rent
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+`;

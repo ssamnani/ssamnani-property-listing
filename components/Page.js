@@ -11,8 +11,8 @@ import Pagination from "./Pagination";
 import "antd/dist/antd.css";
 
 function Page() {
-  const searchResult = useSelector(state => state.searchResult);
-  const { totalCount  } = searchResult;
+  const searchResult = useSelector((state) => state.searchResult);
+  const { totalCount } = searchResult;
 
   return (
     <div className={styles.container}>
@@ -20,10 +20,17 @@ function Page() {
         <title>Malaysia properties for sale | iProperty.com.my</title>
         <link rel="icon" href="/favicon.ico" />
 
-          <link rel="stylesheet" type="text/css" charSet="UTF-8"
-                href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"/>
-          <link rel="stylesheet" type="text/css"
-                href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"/>
+        <link
+          rel="stylesheet"
+          type="text/css"
+          charSet="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
       </Head>
 
       <Header />
@@ -33,11 +40,7 @@ function Page() {
         <div className="subBodyWrapper">
           <div className="searchResultsWrapper">
             <SearchResult />
-            <Pagination
-                pageStart='1'
-                pageEnd='20'
-                totalProperties={totalCount}
-            />
+            <Pagination pageStart="1" pageEnd="20" totalRecords={totalCount} />
             <MortgageCalculator />
           </div>
         </div>
