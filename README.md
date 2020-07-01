@@ -4,7 +4,9 @@
 
 ### Introduction
 
-This application has been developed to demonstrate Frontend coding skills in React. It has been developed using React, Redux and NextJs. Component testing is done using Jest and React Testing Library.
+This application has been developed to demonstrate Frontend coding skills in React. It has been developed using React, Redux and NextJs. Component testing is done using Jest and React Testing Library. 
+
+Data is fetched from `/api/search-result` endpoint which returns response from static file and furnished using `getStaticProps()` and `useSelector()`.
 
 ### Features
 
@@ -61,10 +63,13 @@ yarn test
 yarn coverage
 ```
 
+To view coverage report, run above command with npm or yarn and see `coverage/lcov-report/index.html`
+
 ## Room for Improvements
 
 Follwing can be improved and not acheived due to time constraints:
 
 1. UI can be made responsive
-2. Component testing can be improved with handling more corner cases and testing all components
-3. Several UI improvements
+2. Project can be Dockerized
+3. Component testing can be improved with handling more corner cases and testing all components
+4. Several UI improvements and known issues can be fixed
