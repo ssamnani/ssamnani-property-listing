@@ -33,6 +33,11 @@ Property listing page has:
 
 Get the application up and running:
 
+```bash
+tar -xvzf react-property-listing.tar.gz
+cd react-property-listing
+```
+
 #### npm
 
 ```bash
