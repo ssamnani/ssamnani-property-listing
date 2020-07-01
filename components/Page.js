@@ -7,7 +7,6 @@ import SearchResult from "./SearchResult";
 import MortgageCalculator from "./MortgageCalculator";
 import styles from "../styles/Page.module.css";
 import SearchBar from "./SearchBar";
-import Pagination from "./Pagination";
 import "antd/dist/antd.css";
 
 function Page() {
@@ -40,7 +39,6 @@ function Page() {
         <div className="subBodyWrapper">
           <div className="searchResultsWrapper">
             <SearchResult />
-            <Pagination pageStart="1" pageEnd="20" totalRecords={totalCount} />
             <MortgageCalculator />
           </div>
         </div>

@@ -82,10 +82,12 @@ function Footer() {
                         <li><a className="app-store"
                                href="https://itunes.apple.com/app/iproperty-com-malaysia-property/id366785142?mt=8"
                                title="Download our app from the AppStore" data-platform="ios" target="_blank">
+                                <img src="/assets/images/appStoreIcon.svg" />
                         </a></li>
                         <li><a className="google-play"
                                href="https://play.google.com/store/apps/details?id=com.iproperty.android.search&amp;hl=en"
                                title="Download our app from Google Play" data-platform="android" target="_blank">
+                                <img src="/assets/images/googlePlayIcon.svg" />
                         </a></li>
                     </ul>
                 </section>
