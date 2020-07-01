@@ -6,7 +6,7 @@
 
 This application has been developed to demonstrate Frontend coding skills in React. It has been developed using React, Redux and NextJs. Component testing is done using Jest and React Testing Library. 
 
-Data is fetched from `/api/search-result` endpoint which returns response from static file and furnished using `getStaticProps()` and `useSelector()`.
+Data is fetched from `/api/search-result` endpoint which returns response from static file and furnished using `getStaticProps()` and `useSelector()`. When running locally, API response can be seen at `http://localhost:3000/api/search-result`
 
 Supports Desktop only, not responsive
 
